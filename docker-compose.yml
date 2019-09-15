@@ -10,16 +10,16 @@ services:
 
   db:
     image: postgres
-    container_name: db-copuflix
-    hostname: db-copuflix
+    container_name: db-copyflix
+    hostname: db-copyflix
     volumes:
       - postgres:/var/lib/postgresql/data
-    environment:
-      POSTGRES_PASSWORD: 'docker'
     ports:
       - 5432:5432
 
   web:
+    container_name: copyflix-web
+    hostname: copyflix-web
     build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
