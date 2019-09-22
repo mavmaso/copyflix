@@ -22,4 +22,9 @@ Things you may want to cover:
 * Deployment instructions
 
 * docker
-docker-compose run web rails new . --force -d postgresql --webpack=vue -T
+
+docker-compose run web rails new . --force -d postgresql -T --webpack=vue
+
+docker-compose build
+
+docker-compose run web yarn
