@@ -2,7 +2,7 @@ version: '3'
 services:
   webpacker:
     build: .
-    command: bundle exec bin/webpack-dev-server
+    command:  bash -c " yarn && bundle exec bin/webpack-dev-server "
     volumes:
       - .:/copyflix
     ports:
